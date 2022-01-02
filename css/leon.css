@@ -121,6 +121,22 @@ animation: right-move 0.5s linear forwards;
         width: 1170px;
     }
 }
+/* start up */
+.up button{
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
+   border: none;
+   border-radius: 4px;
+   background-color: var(--main-color);
+cursor: pointer;
+user-select: none;
+padding: 6px;
+font-size: 16px;
+font-weight: bold;
+color: white;
+z-index: 11111;
+}
 /* start header */
 .header{
     background-color: white;
