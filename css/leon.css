@@ -136,7 +136,7 @@ font-size: 16px;
 font-weight: bold;
 color: white;
 z-index: 11111;
-    display:none;
+   display: none;
 }
 /* start header */
 .header{
