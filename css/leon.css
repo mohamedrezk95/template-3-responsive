@@ -138,6 +138,9 @@ color: white;
 z-index: 11111;
    display: none;
 }
+.up:hover{
+    background-color: var(--main-color-alt);
+}
 /* start header */
 .header{
     background-color: white;
