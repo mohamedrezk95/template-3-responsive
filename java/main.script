@@ -13,7 +13,7 @@ btn.onclick=function () {
     })
 }
 // start counter events
-let myDate = new Date("jan 15 2023 10:13:59").getTime();
+let myDate = new Date("jan 15 2023 23:59:59").getTime();
 let Counter = setInterval(() => {
   let dateNow = new Date().getTime();
   let difference = myDate - dateNow;
