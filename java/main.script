@@ -21,8 +21,6 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
-// start skills
-
 // start counter events
 let myDate = new Date("jan 15 2023 23:59:59").getTime();
 let Counter = setInterval(() => {
