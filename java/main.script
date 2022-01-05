@@ -1,26 +1,27 @@
 // start button up
 let btn = document.querySelector(".up");
-let skills=document.querySelector("#our-skills");
-let spans=document.querySelectorAll(".the-progress span");
+let skills = document.querySelector(".our-skills");
+let spans = document.querySelectorAll(".the-progress span");
 window.onscroll = function () {
   if (window.scrollY >= 1000) {
-      btn.style.display="block"
-  }else{
-      btn.style.display="none"
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
   }
-   if (window.scrollY >=skills.offsetTop ) {
-  
-    spans.forEach((span)=>{
-      span.style.width=span.dataset.width
-    })
+
+  if (window.scrollY >= skills.offsetTop) {
+    spans.forEach((span) => {
+      span.style.width = span.dataset.width;
+    });
   }
 };
-btn.onclick=function () {
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    })
-}
+btn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+// start skills
 
 // start counter events
 let myDate = new Date("jan 15 2023 23:59:59").getTime();
