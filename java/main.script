@@ -1,10 +1,18 @@
 // start button up
 let btn = document.querySelector(".up");
+let skills=document.querySelector("#our-skills");
+let spans=document.querySelectorAll(".the-progress span");
 window.onscroll = function () {
   if (window.scrollY >= 1000) {
       btn.style.display="block"
   }else{
       btn.style.display="none"
+  }
+   if (window.scrollY >=skills.offsetTop ) {
+  
+    spans.forEach((span)=>{
+      span.style.width=span.dataset.width
+    })
   }
 };
 btn.onclick=function () {
@@ -13,17 +21,7 @@ btn.onclick=function () {
         behavior:"smooth"
     })
 }
-// start skills
-let skills=document.querySelector("#our-skills")
-let spans=document.querySelectorAll(".the-progress span")
-window.onscroll=function () {
-  if (window.scrollY >=skills.offsetTop ) {
-  
-    spans.forEach((span)=>{
-      span.style.width=span.dataset.width
-    })
-  }
-}
+
 // start counter events
 let myDate = new Date("jan 15 2023 23:59:59").getTime();
 let Counter = setInterval(() => {
