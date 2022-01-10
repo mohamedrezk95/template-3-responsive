@@ -42,3 +42,28 @@ let Counter = setInterval(() => {
     clearInterval(Counter);
   }
 }, 1000);
+// start counter Stats
+let nums = document.querySelector(".Stats");
+let stastsDiv = document.querySelectorAll(".Stats .number");
+let started = false;
+window.onscroll = function () {
+  if (window.scrollY >= stastsDiv.offsetTop) {
+    if (!started) {
+      nums.forEach((num) => StartCounter(num));
+    }
+    started = true;
+  }
+};
+
+// start function to count
+function StartCounter(el) {
+  let goal = el.dataset.goal;
+  // start interval
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
