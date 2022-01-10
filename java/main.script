@@ -2,6 +2,9 @@
 let btn = document.querySelector(".up");
 let skills = document.querySelector(".our-skills");
 let spans = document.querySelectorAll(".the-progress span");
+let nums=document.querySelectorAll(".Stats .number")
+let stats=document.querySelector(".Stats")
+let started=false
 window.onscroll = function () {
   if (window.scrollY >= 1000) {
     btn.style.display = "block";
@@ -14,7 +17,23 @@ window.onscroll = function () {
       span.style.width = span.dataset.width;
     });
   }
+  // start counter Stats
+  if (window.scrollY>=stats.offsetTop) {
+    if (!started) {
+      nums.forEach((num)=>startcount(num))
+    }
+    started=true
+  }
 };
+function startcount(el) {
+  let goal=el.dataset.goal
+  let counte=setInterval(() => {
+    el.textContent++
+    if (el.textContent==goal) {
+      clearInterval(counte)
+    }
+  }, 2000/goal);
+}
 btn.onclick = function () {
   window.scrollTo({
     top: 0,
@@ -42,28 +61,3 @@ let Counter = setInterval(() => {
     clearInterval(Counter);
   }
 }, 1000);
-// start counter Stats
-let nums = document.querySelector(".Stats");
-let stastsDiv = document.querySelectorAll(".Stats .number");
-let started = false;
-window.onscroll = function () {
-  if (window.scrollY >= stastsDiv.offsetTop) {
-    if (!started) {
-      nums.forEach((num) => StartCounter(num));
-    }
-    started = true;
-  }
-};
-
-// start function to count
-function StartCounter(el) {
-  let goal = el.dataset.goal;
-  // start interval
-  let count = setInterval(() => {
-    el.textContent++;
-    if (el.textContent == goal) {
-      clearInterval(count);
-    }
-  }, 2000 / goal);
-}
-
