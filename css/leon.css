@@ -553,7 +553,7 @@ transition: var(--main-transition);
     border-color:#009688 !important ;
     color: #009688;
     background: linear-gradient(to right, #009688 50% ,white 50%);
-    background-size: 200% 100%;
+    background-size: 200% 95%;
     background-position: right bottom;
     transition: var(--main-transition);
        }
