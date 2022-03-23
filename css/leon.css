@@ -539,7 +539,7 @@ background-color: #f44036;
 border-color:#f44036 !important ;
 color: #f44036;
 background: linear-gradient(to right, #f44036 50% ,white 50%);
-background-size: 200% 100%;
+background-size: 200% 95%;
 background-position: right bottom;
 transition: var(--main-transition);
    }
@@ -567,7 +567,7 @@ transition: var(--main-transition);
         border-color:#03a9f4 !important ;
         color: #03a9f4;
         background: linear-gradient(to right, #03a9f4 50% ,white 50%);
-        background-size: 200% 100%;
+        background-size: 200% 95%;
         background-position: right bottom;
         transition: var(--main-transition);
            }
